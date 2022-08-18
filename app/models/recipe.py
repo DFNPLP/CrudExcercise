@@ -10,16 +10,11 @@ from app.models.ingredient import Ingredient
 
 class Recipe(BaseModel):
     id: UUID4
-    name: str
-    recipeYield: str
-    description: str
+    name: str                          # name of the recipe
+    recipeYield: str                   # how many servings the recipe makes
+    description: str                   # a short space to describe the dish
     ingredient_list: List[Ingredient]  # linked to the ingredient model
 
-
-
-    # todo, write some code here
-    #  Add items here to make the model. What makes up a recipe? Temperature in the oven as a float?
-    #  A list of ingredients?
 
     @root_validator(pre=True)
     def insert_id_if_none(cls, values):
