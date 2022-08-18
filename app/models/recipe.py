@@ -13,7 +13,7 @@ class Recipe(BaseModel):
     name: str
     recipeYield: str
     description: str
-    ingredient_list: List[Ingredient]  # I assume this should be integrated with the ingredient model?
+    ingredient_list: List[Ingredient]  # linked to the ingredient model
 
 
 
