@@ -1,7 +1,8 @@
 import uuid
 from pydantic import BaseModel, root_validator
 from pydantic.types import UUID4
-# maybe "from ingredient import Ingredient"
+# maybe "from ingredient import Ingredient" or is it "from app.models.ingredient import Ingredient"?
+# not sure how many folders back I need to go, if any, since the Recipe and Ingredient classes are in the same folder
 
 
 class Recipe(BaseModel):
